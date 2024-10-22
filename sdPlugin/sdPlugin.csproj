@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="Core\Action.cs" />
     <Compile Include="Core\Plugin.cs" />
-    <Compile Include="Parameter\NumberInput.cs" />
-    <Compile Include="Parameter\Parameter.cs" />
-    <Compile Include="Parameter\TextInput.cs" />
+    <Compile Include="Input\ButtonInput.cs" />
+    <Compile Include="Input\CheckBoxInput.cs" />
+    <Compile Include="Input\NumberInput.cs" />
+    <Compile Include="Input\BaseInput.cs" />
+    <Compile Include="Input\TextInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

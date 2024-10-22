@@ -1,6 +1,6 @@
 ﻿namespace sdPlugin.Parameter
 {
-    public class TextInput : Parameter
+    public class TextInput : BaseInput
     {
         public string Value { get; set; }
 
