@@ -11,6 +11,11 @@ namespace sdPlugin.Parameter
             Name = name;
         }
 
+        public BaseInput Clone()
+        {
+            return (BaseInput)this.MemberwiseClone();
+        }
+
         public static bool Get<T>(Dictionary<string, BaseInput> parameters, string key, out T value)
         {
             if (parameters.TryGetValue(key, out var parameterValue) && parameterValue is T typedValue)
