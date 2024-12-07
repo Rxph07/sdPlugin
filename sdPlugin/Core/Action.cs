@@ -7,10 +7,10 @@ namespace sdPlugin
         public abstract string Name { get; }
         public abstract string Icon { get; }
         public virtual string Tooltip { get; }
-        public virtual Dictionary<string, Parameter.BaseInput> Parameters { get; }
-        public virtual void OnKeyDown(Dictionary<string, Parameter.BaseInput> parameters) { }
-        public virtual void OnKeyUp(Dictionary<string, Parameter.BaseInput> parameters) { }
-        public virtual void OnAppear(Dictionary<string, Parameter.BaseInput> parameters) { }
-        public virtual void OnDisappear(Dictionary<string, Parameter.BaseInput> parameters) { }
+        public virtual Dictionary<string, Input.BaseInput> Inputs { get; }
+        public virtual void OnEdit(Dictionary<string, Input.BaseInput> inputs) { }
+        public virtual void OnKeyDown(Dictionary<string, Input.BaseInput> inputs) { }
+        public virtual void OnAppear(Dictionary<string, Input.BaseInput> inputs) { }
+        public virtual void OnDisappear(Dictionary<string, Input.BaseInput> inputs) { }
     }
 }

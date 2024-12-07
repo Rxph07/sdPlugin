@@ -1,4 +1,4 @@
-﻿namespace sdPlugin.Parameter
+﻿namespace sdPlugin.Input
 {
     public class TextInput : BaseInput
     {

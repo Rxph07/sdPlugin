@@ -1,6 +1,4 @@
-﻿using sdPlugin.Parameter;
-
-namespace sdPlugin.Input
+﻿namespace sdPlugin.Input
 {
     public class DecimalInput : BaseInput
     {

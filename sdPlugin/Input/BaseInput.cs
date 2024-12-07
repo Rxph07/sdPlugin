@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
-namespace sdPlugin.Parameter
+namespace sdPlugin.Input
 {
     public class BaseInput
     {
@@ -16,16 +17,14 @@ namespace sdPlugin.Parameter
             return (BaseInput)this.MemberwiseClone();
         }
 
-        public static bool Get<T>(Dictionary<string, BaseInput> parameters, string key, out T value)
+        public static T GetOrDefault<T>(Dictionary<string, BaseInput> parameters, List<BaseInput> defaults, string key) where T : BaseInput
         {
             if (parameters.TryGetValue(key, out var parameterValue) && parameterValue is T typedValue)
             {
-                value = typedValue;
-                return true;
+                return typedValue;
             }
 
-            value = default;
-            return false;
+            return defaults.FirstOrDefault(input => input.Name == key) as T;
         }
     }
 }
