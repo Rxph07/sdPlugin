@@ -5,7 +5,7 @@ namespace sdPlugin.Input
 {
     public class ComboBoxInput : BaseInput, INotifyPropertyChanged
     {
-        private List<string> _items;
+        private List<string> _items = new List<string>();
         public List<string> Items
         {
             get => _items;
@@ -33,10 +33,8 @@ namespace sdPlugin.Input
             }
         }
 
-        public ComboBoxInput(string name, List<string> items) : base(name)
-        {
-            Items = items;
-        }
+        public ComboBoxInput(string name) : base(name) { }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
