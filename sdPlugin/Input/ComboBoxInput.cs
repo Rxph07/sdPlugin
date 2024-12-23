@@ -33,8 +33,10 @@ namespace sdPlugin.Input
             }
         }
 
-        public ComboBoxInput(string name) : base(name) { }
-
+        public ComboBoxInput(string name, List<string> items = null) : base(name)
+        {
+            Items = items != null ? new List<string>(items) : new List<string>();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
