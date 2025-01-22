@@ -50,11 +50,13 @@
     <Compile Include="Input\CheckBoxInput.cs" />
     <Compile Include="Input\ComboBoxInput.cs" />
     <Compile Include="Input\DecimalInput.cs" />
+    <Compile Include="Input\FileOrFolderInput.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="Input\NumberInput.cs" />
     <Compile Include="Input\BaseInput.cs" />
     <Compile Include="Input\SliderInput.cs" />
     <Compile Include="Input\TextInput.cs" />
+    <Compile Include="Input\WebsiteInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

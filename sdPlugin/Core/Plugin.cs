@@ -11,6 +11,6 @@ namespace sdPlugin
         public abstract string Author { get; }
         public virtual string Description => "";
         public virtual void Initialize() { }
-        public abstract List<Action> GetActions();
+        public abstract List<sdPlugin.Action> GetActions();
     }
 }
