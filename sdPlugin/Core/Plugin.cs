@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using sdPlugin.Core;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace sdPlugin
 {
@@ -9,8 +12,14 @@ namespace sdPlugin
         public abstract string CategoryIcon { get; }
         public abstract string Version { get; }
         public abstract string Author { get; }
-        public virtual string Description => "";
+        public PluginConfig Config { get; }
         public virtual void Initialize() { }
         public abstract List<sdPlugin.Action> GetActions();
+
+        protected Plugin()
+        {
+            string pluginPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Plugins", UUID);
+            Config = new PluginConfig(pluginPath);
+        }
     }
 }

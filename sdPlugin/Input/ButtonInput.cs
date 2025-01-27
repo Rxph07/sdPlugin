@@ -1,17 +1,11 @@
 ﻿namespace sdPlugin.Input
 {
-    public class ButtonInput : BaseInput
+    public abstract class ButtonInput : BaseInput
     {
-        private readonly System.Action _onClick;
-
-        public ButtonInput(string name, System.Action onClick) : base(name)
+        public ButtonInput(string name) : base(name)
         {
-            _onClick = onClick;
         }
 
-        public void OnClick()
-        {
-            _onClick();
-        }
+        public abstract void OnClick();
     }
 }
