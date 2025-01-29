@@ -6,6 +6,7 @@ namespace sdPlugin.Input
     public class BaseInput
     {
         public string Name { get; set; }
+        public Plugin Plugin { get; set; }
 
         protected BaseInput(string name)
         {

@@ -22,6 +22,11 @@ namespace sdPlugin.Core
                 Save();
             }
 
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
             try
             {
                 string json = File.ReadAllText(_filePath);
@@ -35,6 +40,8 @@ namespace sdPlugin.Core
 
         public T Get<T>(string key)
         {
+            LoadConfig();
+
             if (_configValues.TryGetValue(key, out var value))
             {
                 try
@@ -51,6 +58,8 @@ namespace sdPlugin.Core
 
         public void Set<T>(string key, T value)
         {
+            LoadConfig();
+
             _configValues[key] = value;
             Save();
         }
