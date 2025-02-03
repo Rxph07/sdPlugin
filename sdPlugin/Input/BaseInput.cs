@@ -20,12 +20,9 @@ namespace sdPlugin.Input
 
         public static T GetOrDefault<T>(Dictionary<string, BaseInput> parameters, List<BaseInput> defaults, string key) where T : BaseInput
         {
-            if (parameters.TryGetValue(key, out var parameterValue) && parameterValue is T typedValue)
-            {
-                return typedValue;
-            }
-
-            return defaults.FirstOrDefault(input => input.Name == key) as T;
+            return parameters.TryGetValue(key, out var parameterValue) && parameterValue is T typedValue
+                ? typedValue
+                : defaults.FirstOrDefault(input => input.Name == key) as T;
         }
     }
 }

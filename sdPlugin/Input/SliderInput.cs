@@ -14,12 +14,7 @@
 
             if (step <= 1) step = 1;
 
-            if (Value < min)
-                Value = min;
-            else if (Value > max)
-                Value = max;
-            else
-                Value = value;
+            Value = Value < min ? min : Value > max ? max : value;
 
             Max = max;
             Min = min;
