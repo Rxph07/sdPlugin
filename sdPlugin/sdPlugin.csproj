@@ -45,6 +45,9 @@
     <Reference Include="Microsoft.Analytics.Interfaces.Streaming" />
     <Reference Include="Microsoft.Analytics.Types" />
     <Reference Include="WindowsBase" />
+    <Reference Include="WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad, processorArchitecture=MSIL">
+      <HintPath>..\..\SmartDeck\packages\InputSimulator.1.0.4.0\lib\net20\WindowsInput.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Action.cs" />
@@ -55,6 +58,7 @@
     <Compile Include="Input\ComboBoxInput.cs" />
     <Compile Include="Input\DecimalInput.cs" />
     <Compile Include="Input\FileOrFolderInput.cs" />
+    <Compile Include="Input\HotkeyInput.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="Input\NumberInput.cs" />
     <Compile Include="Input\BaseInput.cs" />
